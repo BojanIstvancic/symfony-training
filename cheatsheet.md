@@ -16,6 +16,8 @@ symfony console debug:router
 // CONTROLLER
 symfony console make:controller RouteDataController 
 // created in controller/RouteDataController.php
+// here we query data using the repository
+// there are built in methods and also methods that can be custom defined
 
 // DATABASE
 
