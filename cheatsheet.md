@@ -102,4 +102,49 @@ App\DataFixtures\AppFixtures
 			{{ encore_entry_script_tags('method2') }} // here
 		{% endblock %}
     */
+
+    // npm install -D tailwindcss postcss-loader purgecss-webpack-plugin glob-all path - add tailwind
+    // npx tailwindcss init -p
+    update postcss.config.js
+    /*
+    let tailwindcss = require("tailwindcss");
+
+    module.exports = {
+      plugins: [
+        tailwindcss("./tailwind.config.js"),
+        require("postcss-import"),
+        require("autoprefixer"),
+      ],
+    };
+    */
+    update webpack.config.js  // add these things 
+    /*   
+    .enablePostCssLoader((options) => {
+      options.postcssOptions = {
+        config: "./postcss.config.js",
+      };
+    })
+  */
+
+  update app.js // add these things
+
+  /*
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;*
+  */
+
+  update tailwind.config.js
+  // module.exports = {
+  //   content: [
+    // "./assets/**/*.{vue,js,ts,jsx,tsx}",
+    // "./templates/**/*.{html,twig}",
+  //   ],
+  //   theme: {
+  //     extend: {},
+  //   },
+  //   plugins: [],
+  // };
+
+  // npx tailwindcss -i ./assets/styles/app.css -o ./public/build/app.css --watch // compile tailwind
 ```
