@@ -1,0 +1,46 @@
+{# {% block title %}
+	{{title}}
+{% endblock %} #}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div
+		class="example-wrapper">
+
+		{# {% if title %}
+																								<p>{{title}}
+																									- is it works?</p>
+																							{% else %}
+																								<p>NO titlito seo
+																								</p>
+																							{% endif %} #}
+
+
+		<h1 class="bg-blue-500 text-2xl text-center font-bold">Movies</h1>
+
+		{# <ul>
+																				{% for movie in movies %}
+																					<li>{{movie}}</li>
+																				{% endfor %}
+																			</ul> #}
+
+		<h2>Global Variables</2>
+
+		<p>{{_self}}</p>
+		<p>{{_charset}}</p>
+
+		<img src="{{asset('build/images/image1.d45c4dc8.jpg')}}" alt="image-1"/>
+	</div>
+{% endblock %}
