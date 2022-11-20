@@ -35,7 +35,7 @@ class MoviesController extends AbstractController
 
         $repository = $this->em->getRepository(Movie::class);
         $movies = $repository->getClassName();
-        dd($movies); // var_dump for symfony
+        // dd($movies); // var_dump for symfony
 
         return $this->render('/movies/index.html.twig');
     }

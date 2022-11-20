@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
+{# {% block title %}
 	{{title}}
-{% endblock %}
+{% endblock %} #}
 
 {% block body %}
 	<style>
@@ -18,31 +18,30 @@
 		}
 	</style>
 
-	<div class="example-wrapper">
+	<div
+		class="example-wrapper">
 
-		{% if title %}
-			<p>{{title}}
-				- is it works?</p>
-		{% else %}
-			<p>NO titlito seo
-			</p>
-		{% endif %}
+		{# {% if title %}
+									<p>{{title}}
+										- is it works?</p>
+								{% else %}
+									<p>NO titlito seo
+									</p>
+								{% endif %} #}
 
 
-		<h2>Movies</h2>
+		<h1>Movies</h1>
 
-		<ul>
-			{% for movie in movies %}
-				<li>{{movie}}</li>
-			{% endfor %}
-		</ul>
+		{# <ul>
+					{% for movie in movies %}
+						<li>{{movie}}</li>
+					{% endfor %}
+				</ul> #}
 
 		<h2>Global Variables</2>
 
 		<p>{{_self}}</p>
 		<p>{{_charset}}</p>
-		<p>Custom defined global in twit.yml:
-			{{author}}</p>
 
 	</div>
 {% endblock %}
