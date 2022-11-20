@@ -147,4 +147,25 @@ App\DataFixtures\AppFixtures
   // };
 
   // npx tailwindcss -i ./assets/styles/app.css -o ./public/build/app.css --watch // compile tailwind
+
+
+  // add image to twig file 
+  // 1st option, not the best
+  // add image to public/images/ folder (create images folder if doesn't exist)
+  // 	<img src="{{asset('images/image1.jpg')}}" alt="image-1"/> - add image in twig file
+
+  // 2nd option
+  // npm install file-loader --save-dev - add file loader
+  // add assets/images - folder, move image from public to this folder
+  /*
+  update webpack config
+
+    .copyFiles({
+      from: "./assets/images/",
+      to: "images/[path][name].[hash:8].[ext]",
+      pattern: /\.(png|jpeg|jpg)$/,
+  });
+  */
+  // run npm run dev - to build the files
+  // <img src="{{asset('build/images/image1.d45c4dc8.jpg')}}" alt="image-1"/> - update image src
 ```
