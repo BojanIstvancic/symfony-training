@@ -168,4 +168,11 @@ App\DataFixtures\AppFixtures
   */
   // run npm run dev - to build the files
   // <img src="{{asset('build/images/image1.d45c4dc8.jpg')}}" alt="image-1"/> - update image src
+  composer require symfony/form // use symfony forms (create.twig)
+  symfony console make:form MovieFormType Movie // create a form and associate the model with it(MOVIE)
+  //  created: src/Form/MovieFormType.php  - form is created here
+  //  src/Form/MovieFormType.php - update formField types 
+  // pull the form in create.html.twig
+
+   composer require symfony/mime
 ```
