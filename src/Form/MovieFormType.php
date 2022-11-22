@@ -15,6 +15,7 @@ class MovieFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        // add styles for the form inputs
         $builder
             ->add('title', TextType::class, [
                 'attr' => array(
@@ -37,12 +38,10 @@ class MovieFormType extends AbstractType
                 ),
                 'label' => false
             ])
-            ->add('imagePath',  FileType::class, [
-                'attr' => array(
-                    'class' => 'py-10',
-                ),
-                'label' => false
-            ])
+            ->add('imagePath',  FileType::class, array(
+                'required' => false,
+                'mapped' => false // we don't want to associate this field to entity properties
+            ))
             // ->add('actors')
         ;
     }

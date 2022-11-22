@@ -22,7 +22,7 @@
 		class="md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 ">
 		<!-- Review Item -->
 		{% for movie in movies %}
-			<div class="text-center pt-8 pb-4">
+			<div class="text-center pt-8 pb-4 flex flex-col">
 				<img src="{{ movie.imagePath }}" alt="" class="shadow-xl rounded-md h-96"/>
 
 				<h2 class="text-gray-700 font-bold text-3xl py-2">
