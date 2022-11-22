@@ -127,7 +127,17 @@ class MoviesController extends AbstractController
         ]);
     }
 
-    #[Route('/movies/{id}',  methods: ['GET'],  name: 'movie')]
+    #[Route('/movies/delete/{id}',  methods: ['GET', 'DELETE'],  name: 'delete_movie')]
+    public function delete($id): Response
+    {
+        $movie = $this->moviesRepository->find($id);
+        $this->entityManager->remove($movie);
+        $this->entityManager->flush();
+
+        return $this->redirectToRoute('movies');
+    }
+
+    #[Route('/movies/{id}',  methods: ['GET'],  name: 'show_movie')]
     public function show($id): Response
     {
         return $this->render('/movies/show.html.twig', [
